@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fcf_journal" model="account.journal">
+            <field name="name">Factura Consumidor Final</field>
+            <field name="code">FCF</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="True"/>
+            <field name="refund_sequence" eval="True"/>
+            <field name="refund_sequence_id" ref="sequence_anulacion"/>
+            <field name="sequence_id" ref="sequence_consumidor_final"/>
+        </record>
+        <record id="ccf_journal" model="account.journal">
+            <field name="name">Comprobante Credito Fiscal</field>
+            <field name="code">CCF</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="True"/>
+            <field name="refund_sequence" eval="True"/>
+            <field name="refund_sequence_id" ref="sequence_nota_credito"/>
+            <field name="sequence_id" ref="sequence_credito_fiscal"/>
+        </record>
+        <record id="exp_journal" model="account.journal">
+            <field name="name">Factura de Exportacion</field>
+            <field name="code">EXP</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="True"/>
+            <field name="refund_sequence" eval="True"/>
+            <field name="refund_sequence_id" ref="sequence_anulacion_exportacion"/>
+            <field name="sequence_id" ref="sequence_exportacion"/>
+        </record>
+        <record id="anu_journal" model="account.journal">
+            <field name="name">Anulacion</field>
+            <field name="code">ANU</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="False"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="sequence_id" ref="sequence_anulacion"/>
+        </record>
+        <record id="ndc_journal" model="account.journal">
+            <field name="name">Nota de Credito</field>
+            <field name="code">NDC</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="False"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="sequence_id" ref="sequence_nota_credito"/>
+        </record>
+        <record id="axp_journal" model="account.journal">
+            <field name="name">Anulacion de Exportacion</field>
+            <field name="code">AXP</field>
+            <field name="type">sale</field>
+            <field name="show_on_dashboard" eval="False"/>
+            <field name="refund_sequence" eval="False"/>
+            <field name="sequence_id" ref="sequence_anulacion_exportacion"/>
+        </record>
+        
+    </data>
+</odoo>

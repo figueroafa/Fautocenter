@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="transfer_account_id" model="account.account.template">
+            <field name="code">110103</field>
+            <field name="name">Transferencias Bancarias</field>
+            <field name="reconcile" eval='True'/>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+        </record>
+
+        <record id="sv_coa" model="account.chart.template">
+            <field name="name">Plan de Cuentas Generico Para El Salvador</field>
+            <field name="code_digits">6</field>
+            <field name="bank_account_code_prefix">1101</field>
+            <field name="cash_account_code_prefix">1101</field>
+            <field name="transfer_account_id" ref="transfer_account_id"/>
+            <field name="currency_id" ref="base.USD"/>
+        </record>
+        <record id="transfer_account_id" model="account.account.template">
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Account Templates-->
+        <!-- Balance General -->
+
+        <!-- Activos Corrientes o Circulantes -->
+        <record id="efectivo" model="account.account.template">
+            <field name="code">110101</field>
+            <field name="name">Efectivo</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="banco" model="account.account.template">
+            <field name="code">110102</field>
+            <field name="name">Bancos</field>
+            <field name="user_type_id" ref="account.data_account_type_liquidity"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="cobrar" model="account.account.template">
+            <field name="code">110201</field>
+            <field name="name">Cuentas por Cobrar</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_receivable"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="inventario" model="account.account.template">
+            <field name="code">110301</field>
+            <field name="name">Inventarios</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        <record id="inventario_liquidar" model="account.account.template">
+            <field name="code">110302</field>
+            <field name="name">Inventario Por Liquidar</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="iva_credito" model="account.account.template">
+            <field name="code">110401</field>
+            <field name="name">Iva Credito Fiscal</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="iva_retencion" model="account.account.template">
+            <field name="code">110402</field>
+            <field name="name">Retencion 1%</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="iva_percepcion" model="account.account.template">
+            <field name="code">110403</field>
+            <field name="name">Percepcion 1%</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="iva_percepcion2" model="account.account.template">
+            <field name="code">110404</field>
+            <field name="name">Percepcion 2%</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        
+        <record id="iva_importacion" model="account.account.template">
+            <field name="code">110405</field>
+            <field name="name">Importaciones 13%</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="pagos_anticipados" model="account.account.template">
+            <field name="code">110501</field>
+            <field name="name">Pagos Anticipados</field>
+            <field name="user_type_id" ref="account.data_account_type_prepayments"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_activos_corrientes" model="account.account.template">
+            <field name="code">110601</field>
+            <field name="name">Otros Activos Corrientes</field>
+            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Activos No Corrientes o Fijos -->
+        
+        <record id="propiedad" model="account.account.template">
+            <field name="code">120101</field>
+            <field name="name">Propiedades Planta y Equipo</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="bienes" model="account.account.template">
+            <field name="code">120201</field>
+            <field name="name">Bienes Muebles</field>
+            <field name="user_type_id" ref="account.data_account_type_fixed_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="depreciaciones" model="account.account.template">
+            <field name="code">120301</field>
+            <field name="name">Depreciaciones</field>
+            <field name="user_type_id" ref="account.data_account_type_depreciation"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_activos_no_corrientes" model="account.account.template">
+            <field name="code">120401</field>
+            <field name="name">Otros Activos No Corrientes</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_assets"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Pasivos Corriente o Circulante -->
+
+        <record id="pagar" model="account.account.template">
+            <field name="code">210101</field>
+            <field name="name">Cuentas Por Pagar</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="iva_debito" model="account.account.template">
+            <field name="code">210201</field>
+            <field name="name">Debito Fiscal</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_pasivos_corrientes" model="account.account.template">
+            <field name="code">210301</field>
+            <field name="name">Otros Pasivos Corrientes</field>
+            <field name="user_type_id" ref="account.data_account_type_current_liabilities"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Pasivos No Corriente o Fijos -->
+        
+        <record id="a_pagar_largo" model="account.account.template">
+            <field name="code">220101</field>
+            <field name="name">Cuentas Por Pagar a Largo Plazo</field>
+            <field eval="True" name="reconcile"/>
+            <field name="user_type_id" ref="account.data_account_type_payable"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_pasivos_no_corrientes" model="account.account.template">
+            <field name="code">220301</field>
+            <field name="name">Otros Pasivos No Corrientes</field>
+            <field name="user_type_id" ref="account.data_account_type_non_current_liabilities"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Capital -->
+        <record id="capital_no_pagado" model="account.account.template">
+            <field name="code">310101</field>
+            <field name="name">Capital Social No Pagado</field>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        
+        <record id="capital_social" model="account.account.template">
+            <field name="code">310201</field>
+            <field name="name">Capital Social</field>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        
+        <record id="resultados" model="account.account.template">
+            <field name="code">310301</field>
+            <field name="name">Resultados del Ejercicio</field>
+            <field name="user_type_id" ref="account.data_unaffected_earnings"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        
+        <record id="otro_capital" model="account.account.template">
+            <field name="code">310401</field>
+            <field name="name">Otro Capital</field>
+            <field name="user_type_id" ref="account.data_account_type_equity"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+
+        <!-- Estados de Resultado -->
+        <!-- Costos y Gastos -->
+
+        <record id="costos" model="account.account.template">
+            <field name="code">410101</field>
+            <field name="name">Costos de Ventas</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_costos" model="account.account.template">
+            <field name="code">420101</field>
+            <field name="name">Otros Costos</field>
+            <field name="user_type_id" ref="account.data_account_type_direct_costs"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="Gastos" model="account.account.template">
+            <field name="code">430101</field>
+            <field name="name">Gastos</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <record id="otros_gastos" model="account.account.template">
+            <field name="code">440101</field>
+            <field name="name">Otros Gastos</field>
+            <field name="user_type_id" ref="account.data_account_type_expenses"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+        <!-- Ingresos -->
+
+        <record id="ingresos" model="account.account.template">
+            <field name="code">510101</field>
+            <field name="name">Ingresos Por Ventas</field>
+            <field name="user_type_id" ref="account.data_account_type_revenue"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+        
+        <record id="otros_ingresos" model="account.account.template">
+            <field name="code">520101</field>
+            <field name="name">Otros Ingresos</field>
+            <field name="user_type_id" ref="account.data_account_type_other_income"/>
+            <field name="chart_template_id" ref="sv_coa"/>
+        </record>
+
+
+        <!-- chart template -->
+        <record id="sv_coa" model="account.chart.template">
+            <field name="property_account_receivable_id" ref="cobrar"/>
+            <field name="property_account_payable_id" ref="pagar"/>
+            <field name="property_account_expense_categ_id" ref="costos"/>
+            <field name="property_account_income_categ_id" ref="ingresos"/>
+            <field name="use_anglo_saxon" eval="True"/>
+            <field name="complete_tax_set" eval="False"/>
+            <field name="property_stock_account_input_categ_id" ref="inventario_liquidar"/>
+            <field name="property_stock_account_output_categ_id" ref="inventario_liquidar"/>
+            <field name="property_stock_valuation_account_id" ref="inventario"/>
+        </record>
+
+    </data>
+</odoo>

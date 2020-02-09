@@ -1,0 +1,314 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_invoice_sv
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-30 14:05+0000\n"
+"PO-Revision-Date: 2017-08-30 14:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ndc
+msgid "<span style=\"color:white;\">.........</span><span>Sub Total</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ndc
+msgid "<span style=\"color:white;\">.........</span><span>Total Exento</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ndc
+msgid "<span style=\"color:white;\">.........</span><span>Total</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ccf
+msgid "<span style=\"color:white;\">...</span>\n"
+"																		<span>Total Exento</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ccf
+msgid "<span style=\"color:white;\">...</span>\n"
+"																<span>Descuento</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ccf
+msgid "<span style=\"color:white;\">...</span>\n"
+"																<span>Sub Total</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ccf
+msgid "<span style=\"color:white;\">...</span>\n"
+"																<span>Total</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_ccf
+msgid "<span>$ 0.00</span>"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/models/account_invoice.py:16
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_invoice_amount_text
+#, python-format
+msgid "Amount to text"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:11
+#, python-format
+msgid "Anulacion"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:12
+#, python-format
+msgid "Anulacion de Exportacion"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/wizard/account_invoice_refund.py:37
+#, python-format
+msgid "Cannot refund draft/proforma/cancelled invoice."
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/wizard/account_invoice_refund.py:39
+#, python-format
+msgid "Cannot refund invoice which is already reconciled, invoice should be unreconciled first. You can only refund this invoice."
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:8
+#, python-format
+msgid "Comprobante Credito Fiscal"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.actions.report.xml,name:l10n_invoice_sv.report_credito_fiscal
+msgid "Credito Fiscal"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_description
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_form_arancel
+msgid "Description"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_product_description_arancel
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_template_description_arancel
+msgid "Description of Tariff"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_invoice_refund_journal_id
+msgid "Diario"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/models/account_journal.py:14
+#: model:ir.model.fields,help:l10n_invoice_sv.field_account_journal_type_report
+#, python-format
+msgid "El 'Tipo de Documento Fiscal' es usado en las impresiones de los diferentes documentos, solo selecionar si la numeracion corresponde a algunos de los documentos fiscales de venta"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_invoice_refund_sale
+msgid "Es Venta?"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_product_arancel
+msgid "Exportation and importation"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:7
+#, python-format
+msgid "Factura Consumidor Final"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.actions.report.xml,name:l10n_invoice_sv.report_exportacion
+msgid "Factura Exportacion"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_invoice_inv_refund_id
+msgid "Factura Relacionada"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:9
+#, python-format
+msgid "Factura de Exportacion"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.report_invoice_exp
+msgid "INCOTERM:"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model,name:l10n_invoice_sv.model_account_invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model,name:l10n_invoice_sv.model_account_invoice_refund
+msgid "Invoice Refund"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/wizard/account_invoice_refund.py:109
+#, python-format
+msgid "Invoice refund"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model,name:l10n_invoice_sv.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_name
+msgid "Name"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_form_arancel
+msgid "Name Tarrif"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.invoice,state_refund:0
+msgid "No Retificada"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.journal,type_report:0
+#: code:addons/l10n_invoice_sv/models/account_journal.py:10
+#: model:ir.actions.report.xml,name:l10n_invoice_sv.report_ndc
+#, python-format
+msgid "Nota de Credito"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.actions.act_window,name:l10n_invoice_sv.action_arancel
+msgid "Product Tariff Positions"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model,name:l10n_invoice_sv.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_product_ids
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_form_arancel
+msgid "Productos"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_amount_text
+msgid "Refund Invoice"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: selection:account.invoice,state_refund:0
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_invoice_state_refund
+msgid "Retificada"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_posicion_arancel_porcentaje
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_product_arancel
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_product_arancel_id
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_template_arancel
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_product_template_arancel_id
+msgid "Tariff"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model,name:l10n_invoice_sv.model_posicion_arancel
+msgid "Tariff Position of Products for Export and Import"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.menu,name:l10n_invoice_sv.menu_arancel
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_product_arancel
+msgid "Tariff Positions"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: code:addons/l10n_invoice_sv/models/account_journal.py:13
+#: model:ir.model.fields,field_description:l10n_invoice_sv.field_account_journal_type_report
+#, python-format
+msgid "Tipo de Documento Fiscal"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.model.fields,help:l10n_invoice_sv.field_posicion_arancel_porcentaje
+#: model:ir.model.fields,help:l10n_invoice_sv.field_product_product_arancel
+#: model:ir.model.fields,help:l10n_invoice_sv.field_product_template_arancel
+msgid "Use decimal point to set percentage"
+msgstr ""
+
+#. module: l10n_invoice_sv
+#: model:ir.ui.view,arch_db:l10n_invoice_sv.view_amount_text
+msgid "amount to text"
+msgstr ""
+
